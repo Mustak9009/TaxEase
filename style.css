@@ -24,6 +24,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 button[type='submit']{
     background-color: var(--secondary-color);
@@ -50,12 +51,15 @@ button[type='submit']:hover{
     align-items: center;
     flex-direction: column;
 }
-.container .header{
+.header{
+    position: absolute;
+    top: 20px;
+    right: 50px;
     margin-block: var(--spacing-large);
     display: flex;
     gap: 15px;
 }
-.container .header a{
+.header a{
     text-decoration: none;
     color: var(--text-color);
     background-color: var(--secondary-color);
@@ -63,7 +67,7 @@ button[type='submit']:hover{
     border-radius: var(--border-radius-small);
     transition: background-color 0.5s;
 }
-.container .header a:hover{
+.header a:hover{
     text-decoration: underline;
     background-color: var(--accent-color);
 }
