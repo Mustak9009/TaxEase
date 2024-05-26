@@ -7,6 +7,7 @@
     --primary-color:#ffcab0;
     --secondary-color:#C39898;
     --accent-color:#987070;
+    --text-dark-color:var(--accent-color);
     --background-color:white;
     --text-color:white;
     --spacing-large:20px;
@@ -25,6 +26,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    -webkit-font-smoothing: antialiased; /* For older versions of Safari and iOS */
+    -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
 }
 button[type='submit']{
     background-color: var(--secondary-color);
@@ -38,6 +41,20 @@ button[type='submit']{
 }
 button[type='submit']:hover{
     background-color: var(--accent-color);
+}
+.container-header{
+    margin:var(--spacing-small) 0px calc(var(--spacing-large) + 20px);
+}
+h1{
+    width: 100%;
+    color: var(--text-dark-color);
+    text-transform: capitalize;
+    justify-items: flex-start;
+    margin-bottom: var(--spacing-small);
+}
+p{
+    color: #6e6b6b;
+    font-size: medium;
 }
 .container{
     width: 400px;
